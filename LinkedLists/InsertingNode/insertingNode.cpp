@@ -21,7 +21,25 @@ void addFront(Node** head_ref, int new_data)
     (*head_ref) = new_node;
 }
 
-int main()
+void insertAfter(Node* prev_node, int new_data)
 {
 
+    if(prev_node==NULL)
+    {
+        cout << "Given node is null" << endl;
+        return;
+    }
+
+    Node* new_node = new Node();
+
+    new_node->data = new_data;
+
+    new_node->next = prev_node->next;
+
+    prev_node->next = new_node;
+}
+
+int main()
+{
+    return 0;
 }
