@@ -4,6 +4,8 @@ using namespace std;
 
 class Node
 {
+public:
+
     int data;
     Node* next;
 };
@@ -67,4 +69,19 @@ void printList(Node* node)
 int main()
 {
 
+    Node* head = NULL;
+
+    // Add elements in linked list
+    push(&head, 7);
+    push(&head, 1);
+    push(&head, 3);
+    push(&head, 2);
+
+    printList(head);
+
+    deleteNode(&head, 1);
+
+    printList(head);
+
+    return 0;
 }
