@@ -56,6 +56,41 @@ void deleteNode(Node** head_ref, int val)
 
 }
 
+void deleteAtPos(Node** head_ref, int pos){
+
+    Node* temp = *head_ref;
+    Node* prev = NULL;
+
+    if(*head_ref == NULL || pos<0) {
+        return;
+    }
+
+    int currPos = 0;
+
+    while(currPos<pos && temp!=NULL) {
+
+        prev = temp;
+        temp = temp->next;
+        currPos++;
+
+    }
+
+    if(currPos==0) {
+        *head_ref = temp->next;
+        free(temp);
+        return;
+    }
+
+    if(temp==NULL) {
+        return;
+    }
+
+    prev->next = temp->next;
+    free(temp);
+    return;
+
+}
+
 void printList(Node* node)
 {
     while(node!=NULL)
@@ -80,6 +115,10 @@ int main()
     printList(head);
 
     deleteNode(&head, 1);
+
+    printList(head);
+
+    deleteAtPos(&head, 0);
 
     printList(head);
 
