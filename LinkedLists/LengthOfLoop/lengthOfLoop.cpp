@@ -8,13 +8,10 @@ class Node
 public:
 	Node* next;
 	int data;
-	bool visited;
-	int sn;
 
-	Node(int data) {
-		this.data = data;
+	Node(int val) {
+		data = val;
 		next=NULL;
-		visited=false;
 	}	
 };
 
@@ -22,13 +19,39 @@ void push(Node** headRef, int val) {
 	Node* newNode = new Node(val);
 
 	if(*headRef==NULL) {
-		headRef=newNode;
+		*headRef=newNode;
 		return;
 	}
 
 	newNode->next = *headRef;
 	*headRef = newNode;
 	return;
+}
+
+int countNodes(Node* n) {
+	int res=1;
+	Node* temp = n;
+	while(temp->next!=n) {
+		res++;
+		temp=temp->next;
+	}
+	return res;
+}
+
+int countNodesInLoop(Node* list) {
+	Node* slow_p = list;
+	Node* fast_p = list;
+
+	while(slow_p && fast_p && fast_p->next) {
+		slow_p = slow_p->next;
+		fast_p = fast_p->next->next;
+
+		if(slow_p==fast_p) {
+			return countNodes(slow_p);
+		}
+	}
+
+	return 0;
 }
 
 void printList(Node* head) {
@@ -49,6 +72,12 @@ int main() {
 	push(&head, 3);
 	push(&head, 4);
 	push(&head, 5);
+
+	printList(head);
+
+	head->next->next->next->next->next = head->next;
+
+	cout << countNodesInLoop(head) << endl;
 
 	return 0;
 }
