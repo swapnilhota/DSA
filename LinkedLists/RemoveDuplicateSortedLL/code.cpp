@@ -31,6 +31,23 @@ void printList(Node* head) {
 	return;
 }
 
+void removeDuplicate(Node* head) {
+	if(head==NULL) {
+		return;
+	}
+	Node* temp=head;
+	while(temp->next!=NULL) {
+		if(temp->data == temp->next->data) {
+			Node* tmp = temp->next->next;
+			free(temp->next);
+			temp->next = tmp;
+		}
+		else {
+			temp=temp->next;	
+		}		
+	}
+}
+
 int main() {
 
 	Node* head=NULL;
@@ -40,6 +57,10 @@ int main() {
 	push(&head, 2);
 	push(&head, 3);
 	push(&head, 4);
+
+	printList(head);
+
+	removeDuplicate(head);
 
 	printList(head);
 
