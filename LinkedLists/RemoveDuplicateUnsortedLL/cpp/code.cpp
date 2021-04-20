@@ -12,7 +12,7 @@ public:
 		data=val;
 	}
 
-}
+};
 
 void push(Node** head, int new_data) {
 	Node* new_node = new Node(new_data);
@@ -39,15 +39,15 @@ void removeDuplicate(Node* head) {
 	Node* prev = NULL;
 
 	while(temp!=NULL) {
-		if(mp[temp->data]>1) {
-
+		if(mp[temp->data]>=1) {
+			prev->next=temp->next;
+			free(temp);
 		}
 		else {
-			mp[temp]++;
-
+			mp[temp->data]++;
+			prev=temp;
 		}
-		prev=temp;
-		temp=temp->next;
+		temp=prev->next;
 	}
 }
 
