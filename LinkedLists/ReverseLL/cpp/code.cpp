@@ -30,6 +30,21 @@ void printList(Node* head) {
 	cout << endl;
 }
 
+void reverse(Node** head) {
+	Node* curr = *head;
+	Node* prev=NULL;
+	Node* next=NULL;
+
+	while(curr!=NULL) {
+		next=curr->next;
+		curr->next=prev;
+		prev=curr;
+		curr=next;
+	}
+
+	*head=prev;
+}
+
 int main() {
 
 	Node* head=NULL;
@@ -38,6 +53,10 @@ int main() {
 	push(&head, 3);
 	push(&head, 4);
 	push(&head, 5);
+
+	printList(head);
+
+	reverse(&head);
 
 	printList(head);
 
