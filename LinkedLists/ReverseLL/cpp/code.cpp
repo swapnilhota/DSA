@@ -48,11 +48,11 @@ void reverse(Node** head) {
 int main() {
 
 	Node* head=NULL;
-	push(&head, 1);
+	push(&head, 78);
 	push(&head, 2);
-	push(&head, 3);
-	push(&head, 4);
-	push(&head, 5);
+	push(&head, 33);
+	push(&head, 41);
+	push(&head, 59);
 
 	printList(head);
 
