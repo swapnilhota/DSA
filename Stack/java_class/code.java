@@ -11,5 +11,7 @@ class code {
 		stack.push(4);
 
 		System.out.println(stack.peek());
+		System.out.println(stack.search(2));
+		System.out.println(stack.search(10));
 	}
 }
