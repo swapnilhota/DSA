@@ -27,9 +27,20 @@ public:
 		s2.pop();
 		return x;
 	}
-}
+};
 
 int main() {
+
+	Queue q;
+
+	q.enQueue(1);
+	q.enQueue(2);
+	q.enQueue(3);
+
+	for(int i=0; i<3; i++) {
+		cout  << q.deQueue() << " ";
+	}
+	cout << endl;
 
 	return 0;
 }
