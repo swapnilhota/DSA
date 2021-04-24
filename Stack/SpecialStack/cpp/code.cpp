@@ -7,7 +7,7 @@ private:
 	stack<int> s_min;
 
 public:
-	push(int x) {
+	void push(int x) {
 		s.push(x);
 		if(s_min.Empty()) {
 			s_min.push(x);
@@ -16,6 +16,30 @@ public:
 			if(s_min.top()>x) {
 				s_min.push(x);
 			}
+		}
+	}
+
+	int top() {
+		return s.top();
+	}
+
+	void pop() {
+		s.pop();
+	}
+
+	bool isEmpty() {
+		if(s.Empty()) {
+			return true;
+		}
+		return false;
+	}
+
+	int min() {
+		if(s_min.Empty()) {
+			return -1;
+		}
+		else {
+			return s_min.top();
 		}
 	}
 }
