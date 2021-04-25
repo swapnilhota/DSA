@@ -40,6 +40,7 @@ class TwoStacks {
 			System.out.println("Stack Underflow");
 			System.exit(1);
 		}
+		return 0;
 	}
 
 	int pop2() {
@@ -51,6 +52,7 @@ class TwoStacks {
 			System.out.println("Stack Underflow");
 			System.exit(1);
 		}
+		return 0;
 	}
 
 	public static void main(String[] args) {
