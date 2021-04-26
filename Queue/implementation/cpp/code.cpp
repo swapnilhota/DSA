@@ -19,7 +19,7 @@ Queue* createQueue(unsigned capacity) {
 }
 
 int isFull(Queue* queue) {
-	return (queue->size=queue->capacity);
+	return (queue->size==queue->capacity);
 }
 
 int isEmpty(Queue* queue) {
@@ -61,5 +61,17 @@ int rear(Queue* queue) {
 }
 
 int main() {
+
+	Queue* queue = createQueue(1000);
+
+	enqueue(queue, 1);
+	enqueue(queue, 2);
+	enqueue(queue, 3);
+	enqueue(queue, 4);
+
+	cout << dequeue(queue) << " dequeued from queue" << endl;
+	cout << "front item is " << front(queue) << endl;
+	cout << "rear item is " << rear(queue) << endl;
+
 	return 0;
 }
