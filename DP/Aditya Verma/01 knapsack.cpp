@@ -65,3 +65,8 @@ int knapsack(int wt[], int val[], int W, int n)
   }
 }
             
+/************** Top-Down Approach *******************/
+
+// need to make same array as in memoization
+// step1 = initialize the array
+// step2 = change recursive calls to interative calls
