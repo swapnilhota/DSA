@@ -17,3 +17,4 @@
 ### Longest Common Subsequence (LCS) Based
 
 * Longest Common Subsequence Length
+* Longest Common Substring Length
