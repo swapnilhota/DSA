@@ -19,3 +19,4 @@
 * Longest Common Subsequence Length
 * Longest Common Substring Length
 * Print Longest Common Subsequence
+* Shortest Common Supersequence
