@@ -23,3 +23,4 @@
 * Minimum Number of insertion and deletion to convert one string to another
 * Longest Palindromic Subsequence
 * Minimum number of deletions to convert a string to palindrome
+* Print Shortest Common Supersequence
