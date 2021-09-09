@@ -25,3 +25,4 @@
 * Minimum number of deletions to convert a string to palindrome
 * Print Shortest Common Supersequence
 * Longest Repeating Subsequence
+* Sequence Pattern Matching
