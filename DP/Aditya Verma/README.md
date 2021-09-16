@@ -27,3 +27,7 @@
 * Longest Repeating Subsequence
 * Sequence Pattern Matching
 * Minimum number of insertion in a string to make it a palindrome
+
+### Matrix Chain Multiplication
+
+* Matrix Chain Multiplication Min. Cost
