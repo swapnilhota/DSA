@@ -31,3 +31,4 @@
 ### Matrix Chain Multiplication
 
 * Matrix Chain Multiplication Min. Cost
+* Scramble String
