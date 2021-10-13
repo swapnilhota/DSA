@@ -32,3 +32,4 @@
 
 * Matrix Chain Multiplication Min. Cost
 * Scramble String
+* Palindrome Partitioning
